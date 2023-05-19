@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Glory', sans-serif;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: #fffbfb;
+    font-weight: bold;
+}
