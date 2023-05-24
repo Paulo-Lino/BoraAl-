@@ -16,16 +16,19 @@ body {
     background: linear-gradient(45deg,
         #ff9100ee 4.86%,
         #ff7b00da 10.48%,
-        #051ad86e 40.25%);
-  }
-  
-  .cartaoS {
-    margin-top: 460px;
-    display: flex;
+        #051ad86e 40.25%);display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+  }
+  
+  .cartaoS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
   }
   
   .cartao {

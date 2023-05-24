@@ -1,79 +1,89 @@
-main{
-    width: 100%;
-    height: 80%;
-}
-*{
-    color: #0315bb;
-}
-header{
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    display: block;
-   border: 1px  #000000 solid;
-    box-shadow:  20px rgba(0, 0, 24, 0.76);
- background-color: rgb(255, 249, 249);
-}
-html{
+*
+{color: #000;}
+
+html, body {
     height: 100%;
+    
 }
-body{
-    background: linear-gradient(0deg,
-    #0315bb ,
-    #0051ffda ,
-    #006fca );
-    background-repeat: no-repeat;
-    height: 100%;
+
+body {
+    background: linear-gradient(0deg, #0315bb, #0051ffda, #006fca);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-section{
-    display: flex;
+
+header {
+    
+    text-align: center;
     width: 100%;
+    background-color: rgb(255, 249, 249);
+    border: 1px solid #000000;
+    box-shadow: 70px rgba(0, 0, 24, 0.404);     
+} 
+
+h2 {
+    color: #ff9100;
+    margin-bottom: 10px;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding: 10px;
-    height: 50%;
+}
+.cartaoS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+   border-radius: 10px;
+   background-color: azure;
+   box-shadow:  20px rgba(0, 0, 24, 0.76);
+  }
+
+  .pointer{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+  }
+ .check{
+    height: 20px !important ;
+    width: 20px !important;
+ }
+  
     
-}
-footer{
+  footer{
+    display:flex;
+    padding-top: 10px ;
     text-align: center;
     justify-content: center;
-    height: 10%;
     width: 100%;
-
     background-color:rgb(255, 249, 249);
-    border: 1px  #000000 solid;
-    box-shadow:  20px rgba(0, 0, 24, 0.76);
-}
-h2{
-    color:   #ff9100;
 }
 
-
-input{
-    margin: 20px;
-    height: 40px;
-    text-align: center;
-    justify-content: center;
-    border: #000000;
-    border-radius: 20px;
-}
-footer img{
-    padding: 10px;
-}
-
-#mapid{
-    background-color: rgb(87, 86, 86);
+  main {
     width: 100%;
-    height: 450px;
+    height: 100%;
+}
+
+#mapid {
+    width: 100%;
+    height: 300px;
     border-radius: 0px 0px 30px 30px;
 
-}
-#location{
-    height: 40px;
-    color: white;
 }

@@ -1,43 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta name="theme-color" content="#317EFB"/>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
     <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/estilosp5.css">
-     <!-- Make sure you put this AFTER Leaflet's CSS -->
-   
+    <link rel="stylesheet" href="./src/css/estilosp5.css" />
     <title>BoraAlí</title>
-    
-</head>
-<body> 
+  </head>
+  <body>
     <header>
-        <h1>Os mais proximos</h1>
+      <h1>Veja a Rota</h1>
     </header>
     <main>
-    <div id="mapid"></div>
-</main>
-<section>
-    <h2> Crie seu Roteiro</h2>
-    <input type="text">
-    <input type="text">
-    <input type="text">
-</section>
-<footer>
-   <a href=""> <img style="width: 50px; height: 50px ;" src="./src/imagens/botao-de-inicio.png" alt=""></a>
-   <a href=""> <img style="width: 50px; height: 50px ;" src="./src/imagens/mapa (1).png" alt=""></a>
-   <a href=""> <img style="width: 50px; height: 50px ;" src="./src/imagens/heart (1).png" alt=""></a>
-   <a href=""> <img style="width: 50px; height: 50px ;" src="./src/imagens/user.png" alt=""></a>
+      <div id="mapid"></div>
+    </main>
+    <section>
+      <div class="cartaoS">
+        <div class="cartao">
+          <h2> Onde tu vai ? </h2>
+         
+          <div  class="pointer" id="points">
+        
+            <label>
+              <input class="check" type="checkbox" value="Marco Zero" />
+              Marco Zero
+            </label>
+            <label>
+              <input class="check" type="checkbox" value="Torre de Cristal" />
+              Torre de Cristal
+            </label>
+            <label>
+              <input class="check" type="checkbox" value="Torre Malakoff" />
+              Torre Malakoff
+            </label>
+            <label>
+              <input class="check" type="checkbox" value="Cais do Sertão" />
+              Cais do Sertão
+            </label>
+            <label>
+              <input class="check" type="checkbox" value="Igreja de São Pedro dos Clérigos" />
+              Igreja de São Pedro dos Clérigos
+            </label>
+            <label>
+              <input class="check" type="checkbox" value="Mosteiro de São Bento" />
+              Mosteiro de São Bento
+            </label>
+          </div>
 
-</footer>
+        <button class="bt" id="calculate-route-btn">Calcular Rota</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <a href=""
+        ><img
+          style="width: 50px; height: 50px"
+          src="./src/imagens/botao-de-inicio.png"
+          alt=""
+      /></a>
+      <a href=""
+        ><img
+          style="width: 50px; height: 50px"
+          src="./src/imagens/mapa (1).png"
+          alt=""
+      /></a>
+      <a href=""
+        ><img
+          style="width: 50px; height: 50px"
+          src="./src/imagens/heart (1).png"
+          alt=""
+      /></a>
+      <a href=""
+        ><img
+          style="width: 50px; height: 50px"
+          src="./src/imagens/user.png"
+          alt=""
+      /></a>
+    </footer>
+
     <script src="./src/Js/script.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-</body>
+  </body>
 </html>

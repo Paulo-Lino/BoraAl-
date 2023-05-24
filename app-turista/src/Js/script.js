@@ -1,48 +1,140 @@
 
+mapboxgl.accessToken = 'pk.eyJ1IjoicmFmYWVsdmF2YSIsImEiOiJjbGkwcHFvaWIxZ3R5M2hwOXF0ZmxucmZvIn0.eKHsXwyf3AlkjMVvnf4PJg';
 
-let h2 = document.querySelector('h2');
-var map;
-
-function success(pos){
-    console.log(pos.coords.latitude, pos.coords.longitude);
-    //h2.textContent = `Latitude:${pos.coords.latitude}, Longitude:${pos.coords.longitude}`;
-
-    if (map === undefined) {
-        map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 13);
+function getCurrentLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        map.remove();
-        map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 13);
+        alert('Geolocation is not supported by this browser.');
     }
+}
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+function showPosition(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
 
-    
-        L.marker([-8.06248051337705, -34.87117794026077]).addTo(map)
-        .bindPopup('Marco Zero')
-        .openPopup();
+   
+    initMap(latitude, longitude);
+}
 
-        L.marker([-8.06392796149065, -34.869145717173127]).addTo(map)
-        .bindPopup('Torre de Cristal')
-        .openPopup();
 
-        L.marker([-8.061310442519298, -34.87150786222638]).addTo(map)
-        .bindPopup('Torre Malakoff')
-        .openPopup();
+function initMap(latitude, longitude) {
+    const map = new mapboxgl.Map({
+        container: 'mapid',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [longitude, latitude], // Coordenadas iniciais
+        zoom: 12
         
-        L.marker([-8.063405, -34.871145]).addTo(map)
-        .bindPopup('Cais do Sertão')
-        .openPopup();
 
-        L.marker([-8.062353, -34.874223]).addTo(map)
-        .bindPopup('Igreja de São Pedro dos Clérigos')
-        .openPopup();
+    });
+    const userMarker = new mapboxgl.Marker()
+    .setLngLat([longitude, latitude])
+    .addTo(map); 
+    
+    const points = document.querySelectorAll('#points input');
+    const markers = [];
 
-        L.marker([-8.063531, -34.872257]).addTo(map)
-        .bindPopup('Mosteiro de São Bento')
-        .openPopup();
+    points.forEach(point => {
+        point.addEventListener('change', function () {
+            const isChecked = this.checked;
+            const value = this.value;
 
+            if (isChecked) {
+                const coordinates = getCoordinates(value);
+                const marker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map);
+                markers.push(marker);
+            } else {
+                const markerIndex = markers.findIndex(marker => marker.getLngLat().equals(getCoordinates(value)));
+                if (markerIndex !== -1) {
+                    markers[markerIndex].remove();
+                    markers.splice(markerIndex, 1);
+                }
+            }
+        });
+    });
+
+    const calculateRouteBtn = document.getElementById('calculate-route-btn');
+    calculateRouteBtn.addEventListener('click', function () {
+        const selectedPoints = Array.from(points)
+            .filter(point => point.checked)
+            .map(point => point.value);
+
+        if (selectedPoints.length < 1) {
+            alert('Selecione pelo menos dois pontos para calcular a rota.');
+            return;
+        }
+
+        const startPoint = [longitude, latitude]; // Coordenadas do ponto de partida
+        const endPoint = getCoordinates(selectedPoints[selectedPoints.length - 1]);
+
+        const directionsAPI = `https://api.mapbox.com/directions/v5/mapbox/driving/${startPoint[0]},${startPoint[1]};${endPoint[0]},${endPoint[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
+
+        fetch(directionsAPI)
+            .then(response => response.json())
+            .then(data => {
+                const route = data.routes[0].geometry;
+
+                if (map.getSource('route')) {
+                    map.getSource('route').setData({
+                        type: 'Feature',
+                        properties: {},
+                        geometry: route
+                    });
+                } else {
+                    map.addSource('route', {
+                        type: 'geojson',
+                        data: {
+                            type: 'Feature',
+                            properties: {},
+                            geometry: route
+                        }
+                    });
+
+                    map.addLayer({
+                        id: 'route',
+                        type: 'line',
+                        source: 'route',
+                        layout: {
+                            'line-join': 'round',
+                            'line-cap': 'round'
+                        },
+                        paint: {
+                            'line-color': '#900',
+                            'line-width': 6
+                        }
+                    });
+                }
+
+                const bounds = new mapboxgl.LngLatBounds();
+                bounds.extend(startPoint);
+                bounds.extend(endPoint);
+                map.fitBounds(bounds, { padding: 100 });
+            });
+    });
+}
+
+function getCoordinates(pointName) {
+    switch (pointName) {
+        case 'Marco Zero':
+            return [-34.87117794026077, -8.06248051337705];
+        case 'Torre de Cristal':
+            return [-34.869145717173127, -8.06392796149065];
+        case 'Torre Malakoff':
+            return [-34.87150786222638, -8.061310442519298];
+        case 'Cais do Sertão':
+            return [-34.871145, -8.063405];
+        case 'Igreja de São Pedro dos Clérigos':
+            return [-34.874223, -8.062353];
+        case 'Mosteiro de São Bento':
+            return [-34.870588, -8.063531];
+        default:
+            return [0, 0];
+    }
+}
+
+getCurrentLocation();
 
 // atualizações:
 // Museu da Cidade do Recife -8.062124, -34.870069
@@ -66,23 +158,3 @@ function success(pos){
 
 
 
-
-
-
-L.marker([pos.coords.latitude, pos.coords.longitude]).addTo(map)
-        .bindPopup('Eu estou aqui!')
-        .openPopup();
-
-     
-}
-
-function error(err){
-    console.log(err);
-}
-
-var watchID = navigator.geolocation.watchPosition(success, error, {
-    enableHighAccuracy: true,
-    timeout: 5000
-});
-
-//navigator.geolocation.clearWatch(watchID);
