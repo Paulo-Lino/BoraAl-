@@ -1,0 +1,66 @@
+*
+{color: #000;}
+body {
+    background: linear-gradient(0deg, #0315bb, #0051ffda, #006fca);
+    
+}
+.nav{
+    background-color:rgb(255, 249, 249);
+    display: flex;
+    
+    align-items: center;
+   padding-top: 10px;
+}
+.nav img{
+    width: 50px ;
+    height: 50px;
+}
+.caro{
+    width: 100% ;  
+}
+.img-caro{
+    width: 100% !important;
+    height: 300px !important;
+    border-radius: 0px 0px 80px 80px;
+}
+  footer{
+    display:flex;
+    padding-top: 10px ;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color:rgb(255, 249, 249);
+}
+ footer a{
+padding: 10px;
+
+ }
+ .carousel-indicators{
+    align-items: center;
+    margin: 0px !important;
+    position:relative!important;
+}
+.carousel-indicators  .bt1{
+    opacity: 100% !important;
+    width: 110px !important;
+    height: 130px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/MarcoZero/Praca-do-Maraco-Zero-Rosa-dos-Ventos-Abre.webp) ;
+}
+.carousel-indicators  .bt2{
+    opacity: 100% !important;
+    width: 110px !important;
+    height: 130px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/MarcoZero/81c35dfac8d803ebda02aca21242a46f.jpg);
+}
+.carousel-indicators  .bt3{
+    opacity: 100% !important;
+    width: 110px !important;
+    height: 130px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/MarcoZero/14839577679_c7743c2424_b.jpg);
+}

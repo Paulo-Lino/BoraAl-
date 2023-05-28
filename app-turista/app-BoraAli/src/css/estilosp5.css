@@ -1,0 +1,92 @@
+*
+{color: #000;}
+
+html, body {
+    height: 100%;
+    
+}
+
+body {
+    background: linear-gradient(0deg, #0315bb, #0051ffda, #006fca);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    
+    text-align: center;
+    width: 100%;
+    background-color: rgb(255, 249, 249);
+    border: 1px solid #000000;
+    box-shadow: 70px rgba(0, 0, 24, 0.404);     
+} 
+
+h2 {
+    color: #ff9100;
+    margin-bottom: 10px;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.cartaoS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+   border-radius: 10px;
+   background-color: azure;
+   box-shadow:  20px rgba(0, 0, 24, 0.76);
+  }
+
+  .pointer{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+  }
+ .check{
+    height: 20px !important ;
+    width: 20px !important;
+ }
+  
+    
+  footer{
+    display:flex;
+    padding-top: 10px ;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color:rgb(255, 249, 249);
+}
+
+  main {
+    width: 100%;
+    height: 100%;
+}
+footer a{
+    padding: 10px;
+     }
+
+#mapid {
+    width: 100%;
+    height: 300px;
+    border-radius: 0px 0px 30px 30px;
+
+}
