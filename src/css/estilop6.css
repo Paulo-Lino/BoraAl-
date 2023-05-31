@@ -1,0 +1,152 @@
+*
+{color: #000;}
+body {
+    background-color: #E7E7E7;
+    
+}
+.nav{
+    background-color:#E7E7E7  ;
+    display: flex;
+    
+    align-items: center;
+   padding-top: 10px;
+}
+.nav img{
+    width: 50px ;
+    height: 50px;
+}
+.caro{
+    width: 100% ;  
+}
+.img-caro{
+    width: 100% !important;
+    height: 300px !important;
+    border-radius: 0px 0px 80px 80px;
+}
+  footer{
+    display:flex;
+    padding-top: 10px ;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color:rgb(255, 249, 249);
+}
+ footer a{
+padding: 10px;
+
+ }
+ .carousel-indicators{
+    align-items: center;
+    margin: 0px !important;
+    position:relative!important;
+}
+.carousel-indicators  .bt1{
+    opacity: 100% !important;
+    width: 80px !important;
+    height: 50px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/MarcoZero/Praca-do-Maraco-Zero-Rosa-dos-Ventos-Abre.webp) ;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.carousel-indicators  .bt2{
+    opacity: 100% !important;
+    width: 80px !important;
+    height: 50px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/MarcoZero/81c35dfac8d803ebda02aca21242a46f.jpg);
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.carousel-indicators  .bt3{
+    opacity: 100% !important;
+    width: 80px !important;
+    height: 50px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/MarcoZero/14839577679_c7743c2424_b.jpg);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.bt{  
+  margin-left: 10%;
+  align-content: center;
+  color: #FF7A00;
+  font-size: 24px;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  background: #011B3D;
+  border: 1px solid #FFFAF5;
+  border-radius: 80px;
+  display: inline-block;
+  }
+
+  .btdois{  
+    margin-left: 10%;
+    align-content: center;
+    color: #9F9F9F;
+    font-size: 24px;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    background: #D1D1D1;
+    border: 1px solid #D1D1D1;
+    border-radius: 80px;
+    }
+
+    .button-container{
+        display: flex;
+    }
+
+    .list-group-item{
+        color: #FF7A00;
+    }
+
+    .card-title{
+        color: #FF7A00;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    p {
+        color: #000;
+        font-size:18px;
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    h5{
+        color: #FF7A00;
+        font-size: 24px;
+        font-weight: 500;
+        margin-left: 0px;
+        }
+
+    h4{
+        color: #162397;
+        font-size:24px;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+    
+    .card{
+        background-color #E7E7E7;
+    }
+
+    .list-group-item{
+        background-color: #E7E7E7;
+    }
+    .card-body{
+        background-color: #E7E7E7;
+    }
+
+    .text {
+        display:flex;
+        justify-content: space-between;
+    }
