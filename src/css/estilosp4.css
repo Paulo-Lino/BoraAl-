@@ -3,12 +3,10 @@
 
 
 body {
-    background: linear-gradient(0deg, #0315bb, #0051ffda, #006fca);
-    
+    background-color: #E7E7E7;
 }
 .nav{
-    background-color:rgb(255, 249, 249);
-    display: flex;
+    background-color:#E7E7E7 ;
     
     align-items: center;
    padding-top: 10px;
@@ -31,17 +29,25 @@ width: 35px !important;
 height: 15px !important;
 border-radius: 13px !important;
 }
+.card-container1 {
+    height: 300px;
+    overflow-y: auto;
 
+  }
 .card-container {
     overflow-x: scroll;
     white-space: nowrap;
   }
   .card {
     display: inline-block;
-    width: 100px;
-    margin-right: 20px;
+    width: 103px;
+    margin-right: 10px;
+    margin-bottom: 5px;
   }
-
+.card-body
+{
+    padding: 0px;
+}
  
 .caro{
     width: 100% ;  
@@ -51,6 +57,11 @@ border-radius: 13px !important;
     height: 300px !important;
     border-radius: 0px 0px 80px 80px;
     background-size: cover;
+}
+.card img{
+    width: 100px !important;
+    height: 120px;
+    border-radius: 13px ;
 }
   footer{
     display:flex;
@@ -63,7 +74,7 @@ border-radius: 13px !important;
  footer a{
 padding: 10px;
  }
- .card img {
-    width: 70px;
-    height: 100px;
+
+ h5{
+    font-size: 11px;
  }
