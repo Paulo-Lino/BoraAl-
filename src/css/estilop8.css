@@ -1,11 +1,11 @@
 *
 {color: #000;}
 body {
-    background-color: #E7E7E7;
+    background: linear-gradient(0deg, #0315bb, #E7E7E7, #E7E7E7);
     
 }
 .nav{
-    background-color:#E7E7E7  ;
+    background-color:rgb(255, 249, 249);
     display: flex;
     
     align-items: center;
@@ -42,32 +42,32 @@ padding: 10px;
 }
 .carousel-indicators  .bt1{
     opacity: 100% !important;
-    width: 80px !important;
-    height: 50px !important;
+    width: 100px !important;
+    height: 70px !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/MarcoZero/Praca-do-Maraco-Zero-Rosa-dos-Ventos-Abre.webp) ;
+    background-image: url(../img/ruadobomjesus/manual-de-marca-boraalí\(apresentação\ oficial\).png) ;
     border-radius: 20px;
     margin-left: 10px;
 }
 .carousel-indicators  .bt2{
     opacity: 100% !important;
-    width: 80px !important;
-    height: 50px !important;
+    width: 100px !important;
+    height: 70px !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/MarcoZero/81c35dfac8d803ebda02aca21242a46f.jpg);
+    background-image: url(../img/ruadobomjesus/manual-de-marca-boraalí.png);
     border-radius: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
 .carousel-indicators  .bt3{
     opacity: 100% !important;
-    width: 80px !important;
-    height: 50px !important;
+    width: 100px !important;
+    height: 70px !important;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/MarcoZero/14839577679_c7743c2424_b.jpg);
+    background-image: url(../img/ruadobomjesus/download.jpg);
     border-radius: 20px;
     margin-right: 10px;
 }
@@ -89,16 +89,16 @@ padding: 10px;
   .btdois{  
     margin-left: 10%;
     align-content: center;
-    color: #9F9F9F;
+    color: #3c3c3d;
     font-size: 24px;
     font-weight: bold;
     width: 150px;
     height: 40px;
-    background: #D1D1D1;
-    border: 1px solid #D1D1D1;
+    background: #a5a4a3;
+    border: 1px solid #FFFAF5;
     border-radius: 80px;
     }
-
+  
     .button-container{
         display: flex;
     }
@@ -106,47 +106,29 @@ padding: 10px;
     .list-group-item{
         color: #FF7A00;
     }
-
+.card{
+    background-color:  #E7E7E7;
+}
+.list-group-item{
+    background-color:  #E7E7E7;
+}
     .card-title{
         color: #FF7A00;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 26px;
     }
-
+    
     p {
         color: #000;
-        font-size:18px;
-        text-align: justify;
-        margin-left: 10px;
-        margin-right: 10px;
     }
 
     h5{
         color: #FF7A00;
-        font-size: 24px;
-        font-weight: 500;
-        margin-left: 0px;
-        }
+        font-size: 20px;
+        font-weight: medium;
+    }
 
     h4{
-        color: #162397;
-        font-size:24px;
-        font-weight: 500;
-        margin-right: 10px;
+        color: #000;
     }
     
-    .card{
-        background-color: #E7E7E7;
-    }
-
-    .list-group-item{
-        background-color: #E7E7E7;
-    }
-    .card-body{
-        background-color: #E7E7E7;
-    }
-
-    .text {
-        display:flex;
-        justify-content: space-between;
-    }
