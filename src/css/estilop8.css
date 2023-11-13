@@ -36,14 +36,16 @@ padding: 10px;
 
  }
  .carousel-indicators{
+    display: flex;
     align-items: center;
     margin: 0px !important;
     position:relative!important;
+    background-size: cover;
 }
 .carousel-indicators  .bt1{
     opacity: 100% !important;
-    width: 100px !important;
-    height: 70px !important;
+    width: 80px !important;
+    height: 50px !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../img/ruadobomjesus/manual-de-marca-boraalí\(apresentação\ oficial\).png) ;
@@ -52,8 +54,8 @@ padding: 10px;
 }
 .carousel-indicators  .bt2{
     opacity: 100% !important;
-    width: 100px !important;
-    height: 70px !important;
+    width: 80px !important;
+    height: 50px !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../img/ruadobomjesus/manual-de-marca-boraalí.png);
@@ -63,8 +65,8 @@ padding: 10px;
 }
 .carousel-indicators  .bt3{
     opacity: 100% !important;
-    width: 100px !important;
-    height: 70px !important;
+    width: 80px !important;
+    height: 50px !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../img/ruadobomjesus/download.jpg);
@@ -97,6 +99,7 @@ padding: 10px;
     background: #a5a4a3;
     border: 1px solid #FFFAF5;
     border-radius: 80px;
+    opacity: 25%;
     }
   
     .button-container{
